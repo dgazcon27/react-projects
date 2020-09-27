@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app'
+import App from './app-ratemovie'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/main.css'
 import './assets/styles/ihover.min.css'
