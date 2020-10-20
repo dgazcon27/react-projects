@@ -1,23 +1,25 @@
 import React, {useState, useEffect} from 'react';
-import MovieList from './components/movies/movies-list';
-import MovieDetail from './components/movies/movie-detail';
-import {api} from './helpers/request';
-import {getData, storeData} from './helpers/localStorage';
-import {validateDate} from './helpers/helpers';
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch
 } from "react-router-dom";
+
+import MovieList from './components/movies/movies-list';
+import MovieDetail from './components/movies/movie-detail';
+import Header from './components/shared/header'
+import {api} from './helpers/request';
+import {getData, storeData} from './helpers/localStorage';
+import {validateDate} from './helpers/helpers';
+import './assets/styles/movies.css'
 
 const App = () => {
 	const data = () => getData('token') || null;
-	const [token, setToken] = useState(data)
 	const Base = api('authentication/token/new')
 	const auth = Base({})
+
+	const [token, setToken] = useState(data)
+	
 	useEffect(() => {
 		if (!token || validateDate(token.expired_at)) {
 			auth.get()
@@ -26,10 +28,12 @@ const App = () => {
 				storeData('token', res)
 			})
 		}
+
 	})
 	return (
 		<Router>
-			<div>
+		    <Header/>
+			<div className="movie-list">
 			 <Switch>
 	          <Route exact path="/portfolio">
 	            <MovieList />

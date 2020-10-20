@@ -24,3 +24,5 @@ yarn-error.log*
 
 /styles-sass
 /src/assets/styles/*.map
+/src/app-ratemovie/assets/sass-styles
+/src/app-ratemovie/assets/styles/*.map
