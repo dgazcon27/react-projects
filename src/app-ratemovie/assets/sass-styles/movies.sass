@@ -1,0 +1,181 @@
+.center
+	text-align: center
+
+.movie-list
+	background-color: #3a3a3a
+	max-width: 100% !important
+
+.container-box
+	padding-top: 6em
+
+.movie-detail
+	height: 100vh
+
+.search-container
+	position: relative
+
+.container-flexbox
+	display: flex !important
+	justify-content: space-around
+	flex-wrap: wrap
+
+	.flexbox-item
+		width: 200px
+		margin: 10px
+		min-height: 300px
+
+.similar-container
+	h5
+		color: white
+		font-weight: bold
+
+.similar-box
+	padding-bottom: 1em
+	
+	img
+		height: 150px
+		width: auto
+		border: solid 2px
+
+.brand
+	color: white
+
+	img
+		width: 55px
+
+.movie-item
+	height: 100px
+	border-top: solid 1px gray
+
+.result-movies
+	position: absolute	
+	width: 206px	
+	min-height: 300px	
+	background: #3a3a3a	
+	top: 2.4em	
+	z-index: 1
+	list-style: none
+
+	li
+		display: flex
+		align-items: center
+		padding: 4px 2px
+		color: white
+		font-weight: bold
+		
+		img
+			height: 90px
+
+.top-header
+	position: fixed !important
+	top: 0
+	width: 100%
+	background: white
+	z-index: 1
+	background-color: #3a3a3a !important	
+	border-bottom: solid 1px #636363
+
+.text-movie-detail
+	color: white
+	text-align: left
+
+	h1
+		font-weight: bold
+
+.rate-button
+	height: 10%
+	border: none
+	border-radius: 4%
+	font-size: 1.5em
+	background: green
+	color: white
+	margin-top: .4em
+	width: 220px
+
+
+.movie-content
+	margin-bottom: 3em
+
+	img
+		border: solid white 3px !important
+
+	%commonclass
+		position: absolute
+		opacity: 0
+		transition: 0.5s ease
+
+	.box-cover
+		@extend %commonclass
+		top: 0
+		height: 87.2%
+		width: 79.4%
+		left: 28px
+		right: 0
+		bottom: 0
+		background: #6f6f6f
+		border: solid 3px #bf9809
+
+	.title-movie
+		@extend %commonclass
+		top: 30%
+		color: white
+		width: 220px
+		left: 32px
+		font-size: 1.5em
+		font-weight: bold
+
+
+	&:hover .title-movie
+		opacity: 1
+
+	&:hover .box-cover
+		opacity: 0.8
+
+	&:hover img
+		border: solid 3px #bf9809 !important
+
+@media screen and (max-width:1200px)
+	.box-cover
+		height: 90% !important
+		width: 94.4% !important
+		left: 15px !important
+
+	.title-movie
+		left: 19px !important
+
+	.container-box 
+		padding-top: 9em
+
+	.result-movies
+		top: 2.8em
+
+	
+@media screen and (max-width:992px)
+	.box-cover
+		height: 91.2% !important
+		left: 66px !important
+		width: 63.4% !important
+
+	.title-movie
+		left: 70px !important
+		font-size: 2em !important
+
+@media screen and (max-width:768px)
+	.box-cover
+		height: 92.1% !important
+		left: 160px !important
+		width: 41.4% !important
+
+	.title-movie
+		left: 160px !important
+
+	.similar-container
+		text-align: center
+
+	.movie-detail 
+		height: auto
+
+	.text-movie-detail
+		text-align: center
+		padding-top: 3em
+

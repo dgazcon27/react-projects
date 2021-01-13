@@ -1,10 +1,15 @@
-.title-post h3 {
-  color: #5385c1;
+@font-face {
+  font-family: VT323;
+  src: url("../fonts/VT323-Regular.ttf");
 }
-.title-post h2 {
-  color: #5385c1;
+@font-face {
+  font-family: Arame;
+  src: url("../fonts/Arame-Regular.ttf");
 }
-
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("../fonts/RobotoCondensed-Light.ttf");
+}
 .container-post {
   padding: 4em;
 }

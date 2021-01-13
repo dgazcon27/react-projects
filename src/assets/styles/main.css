@@ -1,7 +1,19 @@
 @font-face {
+  font-family: VT323;
+  src: url("../fonts/VT323-Regular.ttf");
+}
+@font-face {
+  font-family: Arame;
+  src: url("../fonts/Arame-Regular.ttf");
+}
+@font-face {
   font-family: RobotoCondensed;
   src: url("../fonts/RobotoCondensed-Light.ttf");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 100%;
   font-family: RobotoCondensed;
@@ -20,7 +32,7 @@ h3 {
 }
 
 p {
-  font-size: 0.9;
+  font-size: 0.9em;
 }
 
 .center-text {
@@ -29,6 +41,54 @@ p {
 
 .container-division {
   padding-top: 2em;
+}
+
+.title-section {
+  font-family: Arame;
+  color: #252934 !important;
+}
+
+.icon svg {
+  color: #7f6cf7 !important;
+}
+
+.footer-container {
+  background: #1b1c1f;
+  height: 150px;
+  padding-right: 5%;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 1em;
+  list-style: none;
+}
+.footer-box li {
+  font-size: 1.5em;
+  background: #2d2e33;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-box li:hover {
+  background: #7f6cf7;
+}
+.footer-box li a {
+  color: white;
+}
+
+.box-name {
+  font-family: VT323;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-left: 3%;
+  font-size: 1.5em;
 }
 
 @media screen and (max-width: 1200px) {

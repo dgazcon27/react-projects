@@ -1,6 +1,22 @@
+@font-face {
+  font-family: VT323;
+  src: url("../fonts/VT323-Regular.ttf");
+}
+@font-face {
+  font-family: Arame;
+  src: url("../fonts/Arame-Regular.ttf");
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("../fonts/RobotoCondensed-Light.ttf");
+}
 .banner {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-family: Arame;
   padding: 12em 0 10em 0;
-  background-image: url("../images/banner.jpg");
+  background-color: #252934;
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -9,6 +25,12 @@
 }
 .banner h1, .banner h3, .banner p {
   color: white;
+}
+.banner h1 {
+  font-size: 4.5em;
+}
+.banner h3 {
+  font-family: VT323;
 }
 
 .banner2 {

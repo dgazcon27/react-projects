@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-const Article = ({title, content}) => {
-	return (
-		<article>
-			<header>
-				<h3>{title}</h3>
-			</header>
-			<p>{content}</p>
-		</article>
-	);
-}
+const Article = ({ title, content }) => {
+  return (
+    <article>
+      <header>
+        <h3 className="article-title">{title}</h3>
+      </header>
+      <p className="article-content">{content}</p>
+    </article>
+  );
+};
 
 export default Article;

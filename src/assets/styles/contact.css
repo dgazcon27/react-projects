@@ -1,0 +1,61 @@
+@font-face {
+  font-family: VT323;
+  src: url("../fonts/VT323-Regular.ttf");
+}
+@font-face {
+  font-family: Arame;
+  src: url("../fonts/Arame-Regular.ttf");
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("../fonts/RobotoCondensed-Light.ttf");
+}
+.contact-container {
+  background: #252934;
+}
+.contact-container .title-section {
+  color: white !important;
+}
+.contact-container .form-box {
+  margin: 2em 0;
+}
+.contact-container .form-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.contact-container .form-container form {
+  width: 50%;
+}
+.contact-container .form-container form button, .contact-container .form-container form .form-input {
+  color: white;
+  font-family: VT323;
+  font-size: 1.7em;
+  border-radius: initial;
+  border-color: transparent;
+  background: #1e242c;
+}
+.contact-container .form-container form .form-input {
+  margin-bottom: 0.2em;
+}
+.contact-container .form-container form button {
+  float: right;
+  width: 25%;
+  border-color: white;
+}
+.contact-container .form-container form button:hover {
+  background: white;
+  color: #1e242c;
+}
+.contact-container .form-container form button:active {
+  background: white;
+  color: #1e242c;
+}
+
+.message-alert {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
+
+/*# sourceMappingURL=contact.css.map */

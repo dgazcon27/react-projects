@@ -1,9 +1,24 @@
+@font-face {
+  font-family: VT323;
+  src: url("../fonts/VT323-Regular.ttf");
+}
+@font-face {
+  font-family: Arame;
+  src: url("../fonts/Arame-Regular.ttf");
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("../fonts/RobotoCondensed-Light.ttf");
+}
 .project-img img {
   width: 100%;
 }
 
 .container-project {
   padding-top: 3em;
+  margin-bottom: 2em;
+  min-height: 250px;
+  background: whitesmoke;
 }
 .container-project article {
   padding-top: 2em;
@@ -38,6 +53,62 @@ footer {
 }
 .us-icons li {
   padding: 0.5em;
+}
+
+.project-box {
+  margin-bottom: 0.5rem;
+}
+.project-box .project-button, .project-box .project-title {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease;
+  width: 94%;
+}
+.project-box .project-title {
+  top: 0;
+  font-size: 2em;
+}
+.project-box .project-button {
+  bottom: 0;
+}
+.project-box .project-img img {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.project-box:hover .project-title {
+  opacity: 1;
+  top: 10%;
+}
+.project-box:hover .project-button {
+  opacity: 1;
+  bottom: 15%;
+}
+.project-box:hover .project-img img {
+  opacity: 0;
+}
+
+.carousel.slide {
+  width: 100%;
+}
+
+.modal-title {
+  font-weight: bold;
+  color: #5a5a5a;
+}
+
+.modal-subtitle {
+  font-weight: bold;
+  color: #c2c2c2;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  background-color: #000000a3 !important;
+  top: 78% !important;
+  width: 10% !important;
+}
+
+.footer-buttons {
+  justify-content: space-between !important;
 }
 
 @media screen and (max-width: 576px) {
