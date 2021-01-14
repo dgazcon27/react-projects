@@ -46,11 +46,15 @@
   position: relative;
   top: 120px;
   opacity: 0;
+  padding-top: 100px;
   transition: all 0.5s ease-out;
 }
 #about-me.active {
   opacity: 1;
   top: 0;
+}
+#about-me .progress-title {
+  background-color: #00d6ff !important;
 }
 
 @media screen and (max-width: 768px) {

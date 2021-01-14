@@ -58,4 +58,16 @@
   color: white;
 }
 
+#contacts {
+  position: relative;
+  top: 120px;
+  opacity: 0;
+  padding-top: 79px;
+  transition: all 0.5s ease-out;
+}
+#contacts.active {
+  opacity: 1;
+  top: 0;
+}
+
 /*# sourceMappingURL=contact.css.map */

@@ -91,6 +91,23 @@ p {
   font-size: 1.5em;
 }
 
+#projects {
+  padding-top: 100px;
+  position: relative;
+  top: 120px;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+#projects.active {
+  opacity: 1;
+  top: 0;
+}
+
+.navbar-nav a {
+  font-family: VT323;
+  font-size: 1.1em;
+}
+
 @media screen and (max-width: 1200px) {
   body {
     font-size: 80%;

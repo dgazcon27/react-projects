@@ -68,12 +68,33 @@ footer {
   top: 0;
   font-size: 2em;
 }
+.project-box .project-title p {
+  font-family: "VT323";
+  font-size: 1em;
+  margin-bottom: 0;
+}
+.project-box .project-title span {
+  font-size: 0.7em;
+  color: #3c9d9b;
+}
 .project-box .project-button {
   bottom: 0;
+}
+.project-box .project-button button {
+  background: transparent;
+  color: black;
+  border-color: #3c9d9b;
+  font-weight: bold;
+}
+.project-box .project-button button:hover {
+  background: #3c9d9b !important;
+  color: white !important;
 }
 .project-box .project-img img {
   opacity: 1;
   transition: 0.5s ease;
+  width: 646px;
+  height: 220px;
 }
 .project-box:hover .project-title {
   opacity: 1;
@@ -101,6 +122,10 @@ footer {
   color: #c2c2c2;
 }
 
+.modal-body p {
+  font-size: 1em;
+}
+
 .carousel-control-next, .carousel-control-prev {
   background-color: #000000a3 !important;
   top: 78% !important;
@@ -109,6 +134,11 @@ footer {
 
 .footer-buttons {
   justify-content: space-between !important;
+}
+
+.project-carousel img {
+  width: 766px !important;
+  height: 266px !important;
 }
 
 @media screen and (max-width: 576px) {

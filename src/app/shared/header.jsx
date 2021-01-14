@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import "../../assets/styles/header.css";
 import avatar from "../../assets/images/mf-avatar.svg";
 
-const Header = () => {
+const Header = ({ current }) => {
   const [isScroll, setIsScroll] = useState(false);
   const [width, setWidth] = useState(0);
   const [heightScreen, setHeightScreen] = useState({ height: "300px" });
@@ -53,17 +53,38 @@ const Header = () => {
         fixed="top"
         className={`navbar-items ${isScroll ? "navbartop" : ""}`}
       >
-        <Navbar.Brand href="#home">
-          <img alt="jathorstudio" width="48px" height="auto" src={avatar} />
+        <Navbar.Brand>
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="justify-content-end"
+          >
+            <Nav>
+              <Nav.Link
+                href="#about-me"
+                className={current === "about" ? "current" : ""}
+              >
+                About
+              </Nav.Link>
+
+              <Nav.Link
+                href="#projects"
+                className={current === "projects" ? "current" : ""}
+              >
+                Projects
+              </Nav.Link>
+
+              <Nav.Link
+                href="#contacts"
+                className={current === "contacts" ? "current" : ""}
+              >
+                Contact
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav>
-            {/*<Nav.Link href="#home">Home</Nav.Link>
-		      		<Nav.Link href="#link">Link</Nav.Link>*/}
-          </Nav>
-        </Navbar.Collapse>
       </Navbar>
+      <div id="home"></div>
       <section id="banner-principal" style={heightScreen} className="banner">
         <div>
           <h1>Hi I'm Daniel Gazcón</h1>

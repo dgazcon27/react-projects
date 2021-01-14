@@ -24,6 +24,7 @@ const App = () => {
   const [show, setShow] = useState(false);
   const [project, setProject] = useState({});
   const [animateStats, setAnimateStats] = useState(false);
+  const [current, setCurrent] = useState("");
 
   const handleClose = () => {
     setShow(false);
@@ -39,12 +40,26 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    let aboutMe = document.querySelector("#about-me");
+    let divs = document.querySelectorAll(".item-container");
+
     function throttleScroll(e) {
-      if (isPartiallyVisible(aboutMe)) {
-        aboutMe.classList.add("active");
-        setAnimateStats(true);
-      }
+      let fromTop = window.scrollY;
+      let currentBox = "";
+      divs.forEach((item) => {
+        if (isPartiallyVisible(item)) {
+          item.classList.add("active");
+          setAnimateStats(true);
+        }
+        if (
+          item.offsetTop <= fromTop &&
+          item.offsetTop + item.offsetHeight > fromTop
+        ) {
+          let current = item.attributes["data-box"].textContent;
+          console.log(current);
+          currentBox = current;
+        }
+      });
+      setCurrent(currentBox);
     }
 
     window.addEventListener("scroll", throttleScroll, false);
@@ -56,8 +71,8 @@ const App = () => {
 
   return (
     <div>
-      <Header />
-      <div id="about-me">
+      <Header current={current} />
+      <div data-box="about" id="about-me" className="item-container">
         <Col
           style={{ paddingTop: "1em" }}
           className="text-center"
@@ -93,8 +108,9 @@ const App = () => {
       </div>
       <Container
         fluid
-        className="container-project title-post container-division"
+        className="container-project title-post container-division item-container"
         id="projects"
+        data-box="projects"
       >
         <Row className="text-center">
           <Col lg={{ span: 4, offset: 4 }}>
@@ -111,6 +127,7 @@ const App = () => {
               />
               <div className="project-title">
                 <p>{project.title}</p>
+                <span>{project.lang}</span>
               </div>
               <div className="project-button">
                 <Button variant="secondary" onClick={() => handleShow(i)}>
@@ -125,9 +142,11 @@ const App = () => {
           <CarouselComponent images={project.images} />
         </ModalComponent>
       </Container>
-      <AuthContext>
-        <Contact />
-      </AuthContext>
+      <div id="contacts" className="item-container" data-box="contacts">
+        <AuthContext>
+          <Contact />
+        </AuthContext>
+      </div>
       <Footer {...socialNetworks} classname="footer-box" />
     </div>
   );

@@ -6,7 +6,7 @@ const CarouselComponent = ({ images }) => {
     <Carousel indicators={false}>
       {images &&
         images.map((image, key) => (
-          <Carousel.Item key={key}>
+          <Carousel.Item key={key} className="project-carousel">
             <img className="d-block w-100" src={image} alt="First slide" />
           </Carousel.Item>
         ))}
